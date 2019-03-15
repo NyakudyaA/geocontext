@@ -22,7 +22,16 @@ DATABASES = {
         'HOST': os.environ.get('DATABASE_HOST'),
         'PORT': 5432,
         'TEST_NAME': 'unittests',
-    }
+    },
+    'vector': {
+            'ENGINE': 'django.contrib.gis.db.backends.postgis',
+            'NAME': os.environ.get('DB_NAME'),
+            'USER': os.environ.get('DB_USERNAME'),
+            'PASSWORD': os.environ.get('DB_PASSWORD'),
+            'HOST': os.environ.get('DB_HOST'),
+            'PORT': 5432,
+            'TEST_NAME': 'unittests',
+        }
 }
 
 
